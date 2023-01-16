@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Table from "./components/Table";
+import {Button, ButtonGroup, FormControl, FormErrorMessage, FormLabel, Input} from '@chakra-ui/react'
+import {ChakraProvider} from '@chakra-ui/react'
+import {Box, Flex, Grid, SimpleGrid} from "@chakra-ui/react"
+import {Field, Form, Formik} from 'formik';
+import Autorization from "./components/forms/Autorization";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ChakraProvider>
+            <Table/>
+           <Autorization/>
+        </ChakraProvider>
+    );
 }
-
 export default App;
